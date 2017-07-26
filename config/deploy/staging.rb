@@ -5,9 +5,8 @@
 
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
-server "localhost", user: "qiucheng", roles: %w{admin}
 
-puts "staging"
+
 
 # role-based syntax
 # ==================
@@ -49,13 +48,14 @@ puts "staging"
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "example.com",
-#   user: "user_name",
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-#   }
+
+server "10.86.6.182",
+  user: "qiucheng",
+  roles: %w{all},
+  ssh_options: {
+    user: "qiucheng", # overrides user setting above
+    keys: %w(/Users/qiucheng/.ssh/id_rsa),
+    forward_agent: false,
+    auth_methods: %w(publickey)
+    # password: "please use keys"
+  }

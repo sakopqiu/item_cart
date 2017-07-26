@@ -27,6 +27,11 @@ gem 'resque', :require => "resque/server"
 
 group :development do
   gem "capistrano", "~> 3.8"
+  # Use Capistrano for deployment
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-deploytags', require: false
+  gem 'capistrano-maintenance', require: false
 end
 
 # Use jquery as the JavaScript library
