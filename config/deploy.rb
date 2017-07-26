@@ -7,8 +7,9 @@ set :repo_url, "git@example.com:me/my_repo.git"
 puts "in config/deploy.rb"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, 'master'
 
+server "localhost"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/Users/qiucheng/code/ruby/capistrano"
 
@@ -33,11 +34,3 @@ set :deploy_to, "/Users/qiucheng/code/ruby/capistrano"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-
-desc "Ask about breakfast"
-task :breakfast do
-  ask(:breakfast,"pancake")
-  on roles(:admin) do |h|
-    execute "echo \"$(whoami) on machine #{h} wants #{fetch(:breakfast)} for breakfast\""
-  end
-end
