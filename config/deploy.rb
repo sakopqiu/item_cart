@@ -7,4 +7,5 @@ set :repo_url, "git@github.com:sakopqiu/item_cart.git"
 # Default branch is :master
 set :branch, 'master'
 set :deploy_to, "/Users/qiucheng/code/ruby/capistrano/item-cart"
-
+set :migration_servers, ["10.86.6.182"]
+set :rails_env, "development"
