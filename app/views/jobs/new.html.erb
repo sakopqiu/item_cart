@@ -1,0 +1,11 @@
+<form action="/jobs" method="post">
+  <textarea name="code"></textarea>
+  <input type="submit"/>
+
+  $str is <%= $str %>
+  <% if notice.present? %>
+      <p>
+        Notice: <%= notice %>
+      </p>
+  <% end %>
+</form>
