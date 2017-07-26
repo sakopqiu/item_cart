@@ -24,6 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'responders'
 gem 'react-rails'
 gem 'resque', :require => "resque/server"
+gem 'unicorn', platforms: :ruby
 
 group :development do
   gem "capistrano", "~> 3.8"
